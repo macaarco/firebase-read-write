@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container">
+      <form id="insertar-producto">
+        <div class="form-group">
+          <label for="nombre-producto">Nombre</label>
+          <input
+            required
+            minlength="5"
+            type="text"
+            name="nombre"
+            class="form-control"
+            id="nombre-producto"
+            placeholder="Nombre del curso"
+          />
+        </div>
+
+        <div class="from-group">
+          <label for="descripcion-producto">Descripcion</label>
+          <textarea
+            required
+            maxlength="255"
+            class="form-control"
+            name="descripcion"
+            id="descripcion-producto"
+            placeholder="Descripción del curso"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="cupos">Cupos</label>
+          <input
+            class="form-control"
+            required
+            type="number"
+            min="1"
+            max="250"
+            id="cupos"
+          />
+        </div>
+
+        <div class="form-group d-flex flex-column">
+          <label for="imagen">Imagen</label>
+          <input required type="file" name="imagen" id="imagen" />
+        </div>
+
+        <button
+          class="btn btn-primary btn-block"
+          style="
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+          "
+          type="submit"
+        >
+          Guardar
+        </button>
+      </form>
+    </section>
+
+    <div class="container m-4" id="lista-productos"></div>
+    <script type="module" src="./app.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
